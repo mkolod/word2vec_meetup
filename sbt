@@ -103,7 +103,7 @@ init_default_option_file () {
 
 declare -r cms_opts="-XX:+CMSClassUnloadingEnabled -XX:+UseConcMarkSweepGC"
 declare -r jit_opts="-XX:ReservedCodeCacheSize=256m -XX:+TieredCompilation"
-declare -r default_jvm_opts_common="-Xms512m -Xmx1536m -Xss2m $jit_opts $cms_opts"
+declare -r default_jvm_opts_common="-Xms1g -Xmx4g -Xss10m $jit_opts $cms_opts"
 declare -r noshare_opts="-Dsbt.global.base=project/.sbtboot -Dsbt.boot.directory=project/.boot -Dsbt.ivy.home=project/.ivy"
 declare -r latest_28="2.8.2"
 declare -r latest_29="2.9.3"
@@ -198,7 +198,7 @@ default_jvm_opts () {
   if [[ $v -ge 8 ]]; then
     echo "$default_jvm_opts_common"
   else
-    echo "-XX:MaxPermSize=384m $default_jvm_opts_common"
+    echo "-XX:MaxPermSize=1g $default_jvm_opts_common"
   fi
 }
 
