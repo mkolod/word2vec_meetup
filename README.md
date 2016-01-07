@@ -10,4 +10,5 @@ Once sbt is running - type "run"
 Applications that can be executed:
 
 1) To train model - select "us.marek.meetup.w2v.W2VTraining"
+
 2) To generate synonyms - select "us.marek.meetup.w2v.W2VPrediction"
