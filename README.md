@@ -1,4 +1,4 @@
-# Word2Vec example for Advanced Spark Meetup
+# Word2Vec example for SF Advanced Spark Meetup (Jan. 12, 2016)
 
 To start sbt:
 
